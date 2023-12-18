@@ -1,0 +1,876 @@
+/* Jeg resetter min css kode*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* ------- Min css kode starter nu ------- */
+
+/* ---- Basic stylelementer for mit website ---- */
+body {
+    margin: 0;
+    background-color: #a5947c;
+    font-family: 'Poiret One', sans-serif;
+  }
+
+  .gron {
+    background-color: #93d086;
+  }
+
+  #groen {
+    background-color: #93d086;
+  }
+  #groento {
+    background-color: #93d086;
+  }
+  .bla {
+    background-color: #83b8d4;
+  }
+  #blaa {
+    background-color: #83b8d4;
+  }
+  #blaato {
+    background-color: #83b8d4;
+  }
+  .ora {
+    background-color: #f3b667;
+  }
+  #orange {
+    background-color: #f3b667;
+  }
+  #orangeto {
+    background-color: #f3b667;
+  }
+
+  #transparent {
+    background-color: transparent;
+  }
+  
+  a {
+    color: rgb(255, 255, 255);
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  h2 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+
+  /* ----- Header ----- I min header er taget ting fra a_BURGERMENU, 
+  hvor jeg så selv har tilføjet justeringer så som logo, farver, burgermenu og submenuer*/
+  
+  .header {
+    background-color: #8b6f59;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    display: inline-block;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #8b6f59;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #4d4d4d;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+.header img {
+  width: 50%;
+}
+
+/* ----- Submenu ----- */
+ 
+.submenu {
+  border: none;
+}
+.menu li{
+  position: relative;
+}
+.menu li ul {
+  display: none;
+  position: relative;
+  background-color: #cdb798; 
+  width: 100%;
+  height: 110px;
+}
+
+.menu li:hover ul {
+  display: block;
+}
+
+.menu li ul li {
+  float:none; 
+  position: relative;
+}
+.menu li ul li:hover {
+background-color: #ffff;
+}
+
+.menu li ul li a{
+display: block;
+padding: 10px;
+text-decoration: none;
+}
+  /* ------- Menu -----*/
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .4s ease-out;
+  }
+  
+  /*------- Menu icon ------*/
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 30px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* ------ Menu knap ----- */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+
+
+/* -------------- FOOTER --------------*/
+footer {
+  background-color: #8b6f59; 
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px; 
+  border-top: solid 2px #fff;
+}
+
+
+
+.footer-element {
+  display: flex;
+  justify-content: space-between; 
+  color: #fff;
+}
+
+
+.footer-item {
+  flex: 1;
+  margin: 5px;
+  text-align: center;
+  
+}
+
+
+.ikoner {
+  display: flex;
+  justify-content: center;
+}
+.ikoner img {
+  max-width: 50px;
+  padding: 2px;
+}
+
+/* ------- FORSIDE ----------*/
+/* ------- Startbillide ----- */
+
+ .big-photo {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+ }
+
+ .start-billede img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: solid 1px grey;
+  }
+  .tekst-på-billede {
+    position: absolute;
+    display: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+    margin-top: 31%;
+    font-size: 20px;
+  }
+  .tekst-på-billede a:hover {
+    color: rgb(125, 124, 124); /* Ændr farven til grå, når musen er over teksten */
+  }
+  
+/* --------- Nyheder ------ */
+
+/* -------- Overskrift ------ */
+.nyheder {
+    text-align: center;
+}
+.nyheder h1 {
+    font-weight: lighter;
+    color: white;
+    font-size: 50px;
+    padding: 5%;
+}
+
+/* --------- Link til nyheder -------*/
+.nyheder-ol {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: #8b6f59;
+    border: solid 2px white;
+    margin: 15px;
+    margin-bottom: 40px;
+}
+
+.ol-forside img {
+    width: 60%;
+    margin-top: 5%;
+}
+
+.nyhed-tekst img {
+    width: 30%;
+    margin-bottom: 5%;
+}
+
+.sammen-forside img {
+    width: 80%;
+    margin-top: 5%;
+}
+
+.nyhed-sammen {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: larger;
+}
+
+.nyhed-sammen h2 {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 2%;
+}
+.nyhed-sammen p {
+  margin-bottom: 5%;
+  line-height: 1.5;
+}
+
+.nyhed-sammen img {
+    width: 30%;
+    margin-bottom: 6%;
+}
+
+
+.nyhed-sammen button {
+  margin-bottom: 3%;
+  background-color: #ffffff;
+  color: #3a3a3a;
+  border: none;
+  border-radius: 25px;
+  width: 180px;
+  cursor: pointer;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 20px;
+}
+
+.nyhed-sammen button:hover {
+  background-color: #858585;
+}
+
+/* -------- Tilmelding til nyhedsbrev ---------*/
+
+
+.newsletter-container {
+  background-color: #796151;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 10%;
+  border: solid 2px white;
+}
+
+.newsletter-container h2 {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+.newsletter-container label {
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #eca618;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #2f2f30;
+}
+
+
+
+/* ------- UNDERSIDE 1 - Alkoholfri øl -----*/
+
+.udvalg {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 40px;
+  margin: 50px;
+}
+
+.udvalg-overskrift{
+  font-size: 40px;
+  padding-top: 60px;
+  margin: 2%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.udvalg img {
+  max-width: 55%;
+  padding: 10%; 
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.hop:hover img {
+  transform: scale(1.2);
+}
+
+
+/* ----- Pilsner + Ingefærøl + Grapefrugt øl = samme style til alle 3 undersider ----- */
+
+.oel img {
+  max-width: 55%;
+}
+
+.produkt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 85px;
+}
+
+.produkt h1 {
+  font-size: 30px;
+  padding-top: 20px;
+  color: #4d4d4d;
+}
+
+.produkt p {
+  line-height: 1.5;
+  padding: 20px 15px 20px 15px;
+  font-size: 20px;
+}
+
+.info img {
+  max-width: 80%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+/* ---------- UNDERSIDE 2 Smagsvarianter ----------- */
+
+.smag {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 87px;
+  font-size: 45px;
+}
+
+.smag-overskrift {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 100px;
+}
+
+.variant img{
+  max-width: 100%;
+}
+
+.variant p {
+  font-size: 45%;
+  padding: 4%;
+  line-height: 1.5;
+}
+
+.her-knap img {
+  max-width: 70%;
+  padding-bottom: 8%;
+  padding-top: 3%;
+}
+
+.her-knap:hover img {
+  transform: scale(1.2);
+}
+
+/* ------- UNDERSIDE 3 Fordele -------------*/
+
+.fordele-overskrift {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+  margin-top: 5%;
+}
+
+.fordele-overskrift h1{
+  font-size: 60px;
+}
+
+.fordele-overskrift h2 {
+  font-size: 35px;
+}
+
+
+.fordele-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.fordele-container p {
+  color: white;
+  line-height: 1.5;
+  padding: 1% 5% 1% 5%;
+}
+
+.fordele-splash img {
+  display: flex;
+  max-width: 100%;
+}
+
+.fordele-ikoner img {
+  max-width: 20%;
+}
+
+
+
+
+/* ------- UNDERSIDE 4 Vi er sammen om det -------*/
+
+
+
+.sammen-overskrift {
+  text-align: center;
+  margin: 8% 8% 0% 8%;
+  color: white;
+  font-size: 45px;
+  line-height: 1.5;
+}
+
+.sammen-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.sammen-content img {
+  max-width: 40%;
+} 
+
+.sammen-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sammen-content p {
+  color: white;
+  line-height: 1.5;
+  padding: 5%;
+}
+
+
+.sammen-container img {
+  max-width: 100%;
+  text-align: center;
+}
+.sammen-billede {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+.sammen-billede img {
+  max-width: 100%;
+}
+
+.splash {
+  position: relative;
+}
+.splash img {
+  max-width: 100%;
+}
+
+/* ----- Øvrige underrsider --------- */
+
+.andre-undersider {
+  padding-top: 200px;
+  padding-bottom: 350px;
+  text-align: center;
+  font-size: 70px;
+}
+
+
+
+  
+  @media (min-width: 768px) {
+   
+   /* header*/
+   
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 30px 30px;
+      font-size: 20px;
+
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+    .header img {
+      max-width: 20%;
+      padding: 2%;
+    }
+    .header img {
+      min-width: 65%;
+    }
+    .menu li ul {
+      height: 120px;
+    }
+
+    /* ----- Forside -------- */
+
+    .tekst-på-billede {
+      font-size: 30px;
+      
+    }
+    .nyheder h1 {
+      font-weight: lighter;
+      font-size: 80px;
+      padding: 2%;
+  }
+  
+    .nyheder-ol {
+        flex-direction: row;
+        margin-left: 5%;   
+        margin-right: 5%; 
+    }
+
+    .ol-forside img {
+        width: 140%;
+        margin-left: 20%;
+    }
+    
+    .nyhed-tekst img {
+        width: 20%;
+        margin-top: 20%;
+    }
+    .sammen-forside img {
+        width: 200%;
+        margin: 5%;
+    }
+    
+    .nyhed-sammen {
+        margin: 5% 5% 0% 25%;
+    }
+    
+    .nyhed-sammen img {
+        width: 20%;
+        margin-top: 10%;
+    }
+
+  
+    .newsletter-container {
+      margin: 10% 25% 10% 25%;
+    }
+
+    /* ------ Alkoholfri øl --------------*/
+
+    .udvalg {
+      flex-direction: row;
+    }
+
+    /* ----- Pilsner + Ingefærøl + Grapefrugt øl = samme style til alle 3 undersider ----- */
+
+    .oel img {
+      max-width: 120%;
+      margin-left: 20%;
+      margin-top: 15%;
+    }
+
+    .produkt {
+      flex-direction: row;
+      padding-top: 10%;
+    }
+
+    .produkt h1 {
+      font-size: 40px;
+    }
+
+    .produkt p {
+      padding: 5% 20% 5% 20%;
+      font-size: 22px;
+    }
+
+    .info img {
+      max-width: 35%;
+      padding-top: 0%;
+      padding-bottom: 10%;
+    }
+
+    /* ------------ Smagsvarianter ----------- */
+
+    .smag-overskrift {
+      font-size: 70px;
+    }
+    .smag {
+      flex-direction: row;
+    }
+
+    .variant img {
+      max-width: 95%;
+    }
+    #grape {
+      max-width: 85%;
+    }
+
+    .her-knap img {
+      max-width: 370px;
+      padding-top: 60px;
+    }
+
+    .sammen-content img {
+      max-width: 20%;
+      margin-left: 30%;
+    }
+
+    
+
+    /* ---------- Fordele ----------*/
+    .fordele-container {
+      text-align: left;
+      flex-direction: row;
+    }
+    
+    .fordele-ikoner {
+      padding-right: 5%;
+    }
+
+    .fordele-container p {
+      font-size: 20px;
+    }
+    .fordele-ikoner img {
+      max-width: 10%;
+      padding-left: 3%;
+    }
+
+    .fordele-splash img {
+      margin-right: 700px;
+      margin-top: 500px;
+    }
+  /* ---------- Vi er sammen --------*/
+
+  .sammen-overskrift {
+    font-size: 60px;
+  }
+  
+  .sammen-box {
+    flex-direction: row;
+  }
+
+  .sammen-content {
+    text-align: left;
+  }
+  .sammen-content p {
+    line-height: 1.5;
+    padding: 2%;
+    padding-right: 100px;
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .splash {
+    margin-right: 700px;
+  }
+  .splash img {
+    max-width: 70%;
+  }
+  .sammen-billede img {
+    min-width: 500px;
+    max-height: 400px;
+    
+  }
+
+
+  /* --------- Footer --------------*/
+    
+       .footer-element {
+      font-size: 120%;
+      padding-bottom: 1%;
+    }
+
+  }
